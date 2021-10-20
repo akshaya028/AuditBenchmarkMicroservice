@@ -123,3 +123,4 @@ F:\MFPE\Audit Benchmark Service\Audit Benchmark Service\bin\Debug\net5.0\log4net
 F:\MFPE\Audit Benchmark Service\Audit Benchmark Service\bin\Debug\net5.0\log4net.dll
 F:\MFPE\Audit Benchmark Service\Audit Benchmark Service\bin\Debug\net5.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 F:\MFPE\Audit Benchmark Service\Audit Benchmark Service\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\MFPE\Audit Benchmark Service\Audit Benchmark Service\bin\Debug\net5.0\Auditdocker.yaml
