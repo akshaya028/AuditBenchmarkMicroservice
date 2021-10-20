@@ -1,4 +1,5 @@
 ﻿using Audit_Benchmark_Service.Models;
+using Audit_Benchmark_Service.Repository_Layer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace Audit_Benchmark_Service.Service_Layer
 {
-    public class BenchmarkService
+    public class BenchmarkService:IBenchmarkService
     {
-        public virtual List<AuditBenchmarkClass> GetListOfBenchmarks()
+        public virtual List<AuditBenchmark> GetListOfBenchmarks()
         {
-            List<AuditBenchmarkClass> AuditBenchmarkList = new List<AuditBenchmarkClass>()
-            {
-                new AuditBenchmarkClass(){ AuditType="Internal",BenchmarkNoAnswers=3 },
-                new AuditBenchmarkClass(){ AuditType="SOX",BenchmarkNoAnswers=1 },
-            };
-            return AuditBenchmarkList;
+            AuditBenchmarkRepo repo = new AuditBenchmarkRepo();
+            return repo.GetBenchmarkList();
         }
 
     }

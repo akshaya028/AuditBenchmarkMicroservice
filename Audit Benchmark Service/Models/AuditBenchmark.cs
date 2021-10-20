@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Audit_Benchmark_Service.Models
 {
-    public class AuditBenchmarkClass
+    public class AuditBenchmark
     {
         public string AuditType { get; set; }
         public int BenchmarkNoAnswers { get; set; }

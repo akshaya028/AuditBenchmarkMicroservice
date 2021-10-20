@@ -1,3 +1,4 @@
+using Audit_Benchmark_Service.Service_Layer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,13 +32,13 @@ namespace Audit_Benchmark_Service
         {
 
             services.AddControllers();
+            services.AddScoped<IBenchmarkService, BenchmarkService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Audit_Benchmark_Service", Version = "v1" });
             });
             var key = "Audit Management Portal Secret Key";
-            //services.AddSingleton<IAuthManager>(new DataLayer(key));
-
+          
             services.AddAuthentication(a =>
             {
                 a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
